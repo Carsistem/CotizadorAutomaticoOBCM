@@ -1,4 +1,4 @@
-//modificado
+﻿//modificado
 
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Web;
 using Oracle.DataAccess.Client;
 using System.Data;
-
+//cambios de prueba
 namespace CotizadorAutomaticoOBCM
 {
     public class Data
