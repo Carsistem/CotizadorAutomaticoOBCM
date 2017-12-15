@@ -94,10 +94,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ABMReglasTallerExcepcion.htm" />
-    <Content Include="fecha.htm" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="index.htm" />
     <Content Include="Scripts\adminlte.min.js" />
     <Content Include="Scripts\angular-chart.min.js" />
     <Content Include="Scripts\angular-flash.min.js" />
@@ -132,8 +130,6 @@
     <Content Include="Scripts\please-wait.min.js" />
     <Content Include="Scripts\resultadosACCCtrl.js" />
     <Content Include="Scripts\routes.js" />
-    <Content Include="Test1.htm" />
-    <Content Include="Test2.htm" />
     <Content Include="Test2\script.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
