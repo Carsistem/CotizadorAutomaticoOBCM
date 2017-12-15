@@ -1,0 +1,97 @@
+html, body {
+  height: 100%;
+}
+
+/*Cotizador*/
+.selectedGrilla {
+    background-color:lightcoral;
+}
+
+
+.rowOperacionCompra{
+   background-color:#D6EAF8;
+}
+
+.rowOperacionVenta{
+   background-color:moccasin;
+}
+
+
+/*resultadosACC*/
+.headerResultadosACCCompra{
+   background-color:lightcoral;
+}
+
+.headerResultadosACCVenta{
+   background-color:lightblue;
+}
+
+.refResultadosACCCompra{
+   color:lightcoral;
+}
+
+.refResultadosACCVenta{
+   color:lightblue;
+}
+
+
+/*Cotizacion FX*/
+
+.cotizacionFXT{
+    background-color:#FEFFC6;
+}
+
+.headerCotizacionFXPosIni{
+   background-color:#B3FFB5;
+}
+.refCotizacionFXPosIni{
+   color:#B3FFB5;
+}
+
+.headerCotizacionFXMovDia{
+   background-color:#B9BEFF;
+}
+.refCotizacionFXMovDia{
+   color:#B9BEFF;
+}
+
+.headerCotizacionFXPosFin{
+   background-color:#FFB7B9;
+}
+.refCotizacionFXPosFin{
+   color:#FFB7B9;
+}
+
+.cotizacionFXValoresNegativos{
+    color:red;
+}
+
+/*Feriados*/
+
+.ColorLabelAMB{
+    color:#efaaa3;
+}
+
+.ColorLabelARG{
+    color:#97eaff;
+}
+
+.ColorLabelUSA{
+    color:#9fffd5;
+}
+
+.ColorFeriadoAMB{
+    background:#efaaa3;
+}
+
+.ColorFeriadoARG{
+    background:#97eaff;
+}
+
+.ColorFeriadoUSA{
+    background:#9fffd5;
+}
+
+.ColorFeriadoDefault{
+    background:#fad698;
+}
