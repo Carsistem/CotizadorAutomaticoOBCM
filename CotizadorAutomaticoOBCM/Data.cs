@@ -26,7 +26,7 @@ namespace CotizadorAutomaticoOBCM
             {
                 items.Add(new EntityItem { Codigo = Convert.ToString(dr["codigo"]), Descripcion = Convert.ToString(dr["descripcion"]) });
             }
-
+            //Prueba de git
             return items;
         }
 
