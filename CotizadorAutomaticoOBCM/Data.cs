@@ -21,6 +21,7 @@ namespace CotizadorAutomaticoOBCM
             OracleDataReader dr = cmd.ExecuteReader();
 
             IList<EntityItem> items = new List<EntityItem>();
+
             while (dr.Read())
             {
                 items.Add(new EntityItem { Codigo = Convert.ToString(dr["codigo"]), Descripcion = Convert.ToString(dr["descripcion"]) });
