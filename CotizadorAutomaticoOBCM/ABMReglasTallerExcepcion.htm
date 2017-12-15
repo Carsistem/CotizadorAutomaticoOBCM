@@ -1,0 +1,892 @@
+﻿<!DOCTYPE html>
+
+<html ng-app="FpaApp" class="ng-scope" style="height: auto; min-height: 100%;">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+        <!--<base href="/">-->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="shortcut icon" href="http://webdesafront04:8577/Dist/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="http://webdesafront04:8577/Dist/img/favicon.ico" type="image/x-icon">
+
+        <title>Prototipo</title>
+
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/css/prettify.css">
+        <link rel="stylesheet" href="/css/pygments.css">
+        <link rel="stylesheet" href="/css/bootstrap-timepicker.css">
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+        <link rel="stylesheet" href="/css/AdminLTE.min.css">
+        <link rel="stylesheet" href="/css/skin-red-light.min.css">
+        <link rel="stylesheet" href="/css/animate.css">
+        <link href="/css/toogle-switch.css" rel="stylesheet">
+        <link href="/css/bootstrap-datetimepicker.css" rel="stylesheet">
+        <link href="/css/bootstrap-year-calendar.min.css" rel="stylesheet">
+        <link href="/css/Please-wait.css" rel="stylesheet">
+        <link href="/css/ngDialog.min.css" rel="stylesheet">
+        <link href="/css/ng-table.min.css" rel="stylesheet">
+        <link href="/css/ngDialog-theme-default.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/style.css">
+
+
+
+
+        <!-- Librerias -->
+        <script src="/Scripts/jquery-3.2.1.min.js"></script>
+
+        <script type="text/javascript" src="/Scripts/bootstrap-timepicker.js"></script>
+        
+        <script type="text/javascript" src="/Scripts/Charts.min.js"></script><style type="text/css">/* Chart.js */
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style>
+        <script src="/Scripts/bootstrap-year-calendar.min.js"></script>
+        <script src="/Scripts/bootstrap-year-calendar.es.js"></script>
+
+        <!-- Angular Librerias -->
+        <script type="text/javascript" src="/Scripts/angular.min.js"></script>
+        <script type="text/javascript" src="/Scripts/angular-ui-router.js"></script>
+        <script type="text/javascript" src="/Scripts/angular-fullscreen.js"></script>
+        <script type="text/javascript" src="/Scripts/angular-chart.min.js"></script>
+        <script type="text/javascript" src="/Scripts/angular-local-storage.min.js"></script>
+        <script type="text/javascript" src="/Scripts/angular-flash.min.js"></script>
+        <script type="text/javascript" src="/Scripts/ng-table.min.js"></script>
+        <script type="text/javascript" src="/Scripts/ngDialog.min.js"></script>
+        <script type="text/javascript" src="/Scripts/angular-locale-es-ar.min.js"></script>
+        <script type="text/javascript" src="/Scripts/Chart.bundle.min.js"></script><style type="text/css">/* Chart.js */
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style>
+        <!--<script type="text/javascript" src="dist/js/Angular/jcs-auto-validate.min.js"></script>
+        <script type="text/javascript" src="dist/js/Angular/mask.min.js"></script>
+        <script type="text/javascript" src="dist/js/Angular/angular-table.min.js"></script>-->
+
+        <!-- - -Angular APP - - -->
+        <script type="text/javascript" src="/Scripts/app.js"></script>
+        <script type="text/javascript" src="/Scripts/routes.js"></script>
+        <script type="text/javascript" src="/Scripts/filtros.js"></script>
+        <!-- - Angular Directivas - -->
+        
+        <script type="text/javascript" src="/Scripts/datetimepicker.js"></script>
+     
+
+               
+        <!-- - Angular Controladores - -->
+        <script type="text/javascript" src="/Scripts/dashboardCtrl.js"></script>
+        <script type="text/javascript" src="/Scripts/dashboardTRCtrl.js"></script>
+        <script type="text/javascript" src="/Scripts/LoginCtrl.js"></script>
+        <script type="text/javascript" src="/Scripts/CotizadorCtrl.js"></script>
+        <script type="text/javascript" src="/Scripts/resultadosACCCtrl.js"></script>
+        <script type="text/javascript" src="/Scripts/ContabilidadFXCtrl.js"></script>
+        <script src="/Scripts/FeriadosCtrl.js"></script>        
+        <!-- - Angular Servicios - -->
+        <!--<script src="/Scripts/authService.js"></script>-->
+<style>
+        .bootstrap-timepicker .input-group-addon {
+    cursor: pointer;
+}
+</style>
+
+    </head>
+    <body class="skin-red-light sidebar-mini pg-loaded" ng-class="bodyClass" style="height: auto; min-height: 100%;">
+
+        <!-- uiView: --><ui-view class="ng-scope"><div class="wrapper ng-scope" ng-controller="mainCtrl">
+    <!-- Header -->
+    <header class="main-header">
+        <!-- Logo -->
+        <a href="#" class="logo">
+            <span class="logo-mini"><b class="ng-binding">Prototipo</b></span>
+            <span class="logo-lg align-content-center"><b class="ng-binding">  Prototipo</b><small class="ng-binding"></small></span>
+        </a>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-static-top" role="navigation">
+            <!-- Boton que oculta SideBar-->
+            <a href="" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                <span class="sr-only">Toggle navigation</span>
+            </a>
+            <!-- NavBar Derecha -->
+            <div class="navbar-custom-menu">
+                <!-- ngInclude: 'Pages/Index/navbar.html' --><ul class="nav navbar-nav ng-scope tree" ng-include="&#39;Pages/Index/navbar.html&#39;"><!--Cerrar sesion-->
+<li class="dropdown user user-menu ng-scope">
+
+    <a href="" class="dropdown-toggle" data-toggle="dropdown">
+        <span class="hidden-xs ng-binding"><i class="fa fa-user-o"></i> JUAN P</span>
+    </a>
+
+    <ul class="dropdown-menu tree">
+
+        <li class="user-header">
+            <p class="ng-binding">
+                JUAN P<br>
+                <small>santanderrio@serverexterno.com</small>
+                <small>operador/verificador</small>
+            </p>
+        </li>
+
+        <li class="user-footer">
+            <div class="pull-right">
+                <a ng-click="logOff()" title="Cerrar Sesion" class="btn btn-default btn-flat">Cerrar sesion <i class="fa fa-sign-out fa-lg"></i></a>
+            </div>
+        </li>
+
+    </ul>
+</li>
+<!--FullScreen-->
+<li class="ng-scope">
+    <a href="" ng-click="goFullscreen()" data-toggle="control-sidebar" title="Colocar en modo Pantalla Completa"><i class="fa fa-expand expand-off"></i></a>
+</li></ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Menu - SideBar Izquierdo -->
+    <!-- ngInclude: 'Pages/Index/sidebar.html' --><aside class="main-sidebar ng-scope" ng-include="&#39;Pages/Index/sidebar.html&#39;"><section class="sidebar ng-scope">
+    <!-- Sidebar user panel (optional) -->
+    <!--<div class="sidebar-form">
+        <div class="input-group">
+            <input type="text" name="q" class="form-control search-menu-box" placeholder="Buscar...">
+            <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat">
+                    <i class="fa fa-search"></i>
+                </button>
+            </span>
+        </div>
+    </div>-->
+
+    
+
+
+
+
+
+    <ul class="sidebar-menu tree" data-widget="tree">
+        <li class="header">MENU</li>
+
+        <li ui-sref-active="active" style="cursor:pointer" ui-sref="app.dashboard" href="#!/"><a><i class="fa fa-dashboard"></i> <span>Inicio</span></a></li>
+
+        <li ui-sref-active="active" style="cursor:pointer" ui-sref="app.dashboardTR" href="#!/dashboardTR"><a><i class="fa fa-dashboard"></i> <span>Inicio Trader</span></a></li>
+
+        <li ui-sref-active="active" title="Cotizador Operaciones FX Trader [Piloto]" style="cursor:pointer" ui-sref="app.Cotizador" href="#!/Eventos/Sistema_de_Cambios/Cotizador" class="active"><a><i class="fa fa-money"></i><span>Cotizador Operacion...</span></a></li>
+
+        <li class="treeview">
+            <a href="">
+                <i class="fa fa-files-o"></i>
+                <span>Informes</span>
+                <span class="pull-right-container">
+                    <i class="fa fa-angle-left pull-right"></i>
+                </span>
+            </a>
+            <ul class="treeview-menu tree" style="display: none;">
+                <li ui-sref-active="active" title="RESACC - Resultados A.C.C." style="cursor:pointer" ui-sref="app.resultadosACC" href="#!/Informes/ForeingExchange/resultadosACC"><a><i class="fa fa-circle-o"></i><span>Resultados A.C.C</span></a></li>
+
+                <li ui-sref-active="active" title="Posicion del dia" style="cursor:pointer" ui-sref="app.contabilidadFX" href="#!/Informes/ContabilidadFX/ContabilidadFX"><a><i class="fa fa-circle-o"></i><span>Posicion del dia</span></a></li>
+            </ul>
+        </li>
+
+        <li class="treeview">
+            <a href="">
+                <i class="fa fa-wrench"></i>
+                <span>General</span>
+                <span class="pull-right-container">
+                    <i class="fa fa-angle-left pull-right"></i>
+                </span>
+            </a>
+            <ul class="treeview-menu tree" style="display: none;">
+                <li ui-sref-active="active" title="Feriados" style="cursor:pointer" ui-sref="app.Feriados" href="#!/Archivos/Feriados"><a><i class="fa fa-circle-o"></i><span>Feriados</span></a></li>
+            </ul>
+        </li>
+
+        <!--Eventos-->
+        <!--<li class="treeview">
+            <a href="#">
+                <i class="fa fa-list"></i> <span>Eventos</span>
+                <span class="pull-right-container">
+                    <i class="fa fa-angle-left pull-right"></i>
+                </span>
+            </a>
+            <ul class="treeview-menu" style="display: none;">
+                <li class="treeview menu-open">
+                    <a href="#">
+                        <i class="fa fa-exchange"></i> <span>Sistemas de Cambios</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu" style="display: none;">
+                        <li ui-sref-active="active" title="Cotizador Operaciones FX Trader [Piloto]" style="cursor:pointer" ui-sref="app.Cotizador"><a><i class="fa fa-money"></i> Cotizador Operacion...</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>-->
+
+    </ul>
+    <!-- /.sidebar-menu -->
+</section>
+<!-- /.sidebar -->
+
+</aside>
+
+    <!-- Contenido Principal (ROUTES) -->
+    <div class="content-wrapper" style="min-height: 529.777778148651px;">
+        <section class="content container-fluid">
+            <!-- uiView: main --><div ui-view="main" class="ng-scope"><section class="content-header ng-scope">
+    <h1>ABM Taller de Excepciones</h1>
+
+
+    
+
+    
+
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Inicio</a></li>
+        <li class="active">Cotizar Operaciones</li>
+    </ol>
+</section>
+
+<!--Grilla-->
+<section class="content ng-scope">
+
+    <script type="text/ng-template" id="PopupParametros" class="ng-scope">
+        <label>Parámetros</label>
+        <div>
+            Administración de Parámetros
+        </div>
+        <div class="ngdialog-buttons" style="margin-top:15px;">
+            <button type="button" class="ngdialog-button btn-primary" ng-click="closeThisDialog()">Aplicar</button>
+            <button type="button" class="ngdialog-button" ng-click="closeThisDialog()">Cerrar</button>
+        </div>
+    </script>
+
+    <script type="text/ng-template" id="BuscarSegmentos" class="ng-scope">
+        <label>Segmentos</label>
+
+        <div style="margin-top:10px;margin-bottom:10px;">
+            <input type="text" ng-model="filterCotizacion.SegmentoFilter" ng-change="SegmentoFilter_Change()"/>
+        </div>
+
+        <div>
+            <select style="height:250px;" ng-model="filterCotizacion.SegmentoDisponible" class="form-control ng-pristine ng-valid ng-empty ng-touched" multiple="multiple">
+                <option ng-repeat="option in filterCotizacion.Segmentos" ng-value="option.name" class="ng-binding ng-scope" value="string:" selected="selected">{{option.name}}</option>
+            </select>
+        </div>
+        <div class="ngdialog-buttons" style="margin-top:15px;">
+            <button type="button" class="ngdialog-button btn-primary" ng-click="SeleccionarSegmentos()">Aplicar</button>
+            <button type="button" class="ngdialog-button" ng-click="closeThisDialog()">Cerrar</button>
+        </div>
+    </script>
+
+    <script type="text/ng-template" id="BuscarClientes" class="ng-scope">
+        <label>Clientes</label>
+        
+        <div style="margin-top:10px;margin-bottom:10px;">
+            <input type="text" ng-model="filterCotizacion.ClienteFilter" ng-change="ClienteFilter_Change()"/>
+        </div>
+
+        <select style="height:250px;" ng-model="filterCotizacion.ClienteDisponible" class="form-control ng-pristine ng-valid ng-empty ng-touched" multiple="multiple">
+            <option ng-repeat="option in filterCotizacion.Clientes" ng-value="option.name" class="ng-binding ng-scope" value="string:" selected="selected">{{option.name}}</option>
+        </select>
+        <div class="ngdialog-buttons" style="margin-top:15px;">
+            <button type="button" class="ngdialog-button btn-primary" ng-click="SeleccionarClientes()">Aplicar</button>
+            <button type="button" class="ngdialog-button" ng-click="closeThisDialog()">Cerrar</button>
+        </div>
+    </script>
+
+    <script type="text/ng-template" id="BuscarMonedas" class="ng-scope">
+        <label>Monedas</label>
+        
+        <div style="margin-top:10px;margin-bottom:10px;">
+            <input type="text" ng-model="filterCotizacion.MonedaFilter" ng-change="MonedaFilter_Change()"/>
+        </div>
+
+        <select style="height:250px;" ng-model="filterCotizacion.MonedaDisponible" class="form-control ng-pristine ng-valid ng-empty ng-touched" multiple="multiple">
+            <option ng-repeat="option in filterCotizacion.Monedas" ng-value="option.name" class="ng-binding ng-scope" value="string:" selected="selected">{{option.name}}</option>
+        </select>
+        <div class="ngdialog-buttons" style="margin-top:15px;">
+            <button type="button" class="ngdialog-button btn-primary" ng-click="SeleccionarMonedas()">Aplicar</button>
+            <button type="button" class="ngdialog-button" ng-click="closeThisDialog()">Cerrar</button>
+        </div>
+    </script>
+
+
+    <div class="row">
+        <div class="col-md-12">
+        <form id="frmMain" class="form-horizontal" role="form" ng-submit="addRow()">
+            <div class="box box-primary">
+                <!--Header-->
+                <div class="box-header with-border">
+                    <!--Botones Izquierda-->
+                    <div class="pull-left" style="width:100%">
+                        <div style="margin-left:5px;margin-top:5px" class="btn-group">
+                            <!--<input type="text" name="Concepto" ng-disabled="$filterRow.disabled" ng-model="params.filter()[name]" class="input-filter form-control ng-pristine ng-untouched ng-valid ng-scope ng-empty" placeholder="">-->
+                            <label>Segmentos</label>
+                            <a style="float:right;" href="#" ng-click="BuscarSegmentos()"><img src="images/btnLupa.png" /></a>
+
+                            <select style="min-width: 250px;" ng-model="filterCotizacion.Segmento" class="form-control ng-pristine ng-valid ng-empty ng-touched" multiple="multiple">
+                                <option ng-repeat="option in filterCotizacion.SegmentosSeleccionados" ng-value="option.name" class="ng-binding ng-scope" value="string:" selected="selected">{{option.name}}</option>
+
+                            </select>
+                        </div>
+                        <div style="margin-left:20px;margin-top:5px" class="btn-group">
+                            <label>Cliente</label>
+                            <!--<input type="text" name="Cliente" ng-disabled="$filterRow.disabled" ng-model="params.filter()[name]" class="input-filter form-control ng-pristine ng-untouched ng-valid ng-scope ng-empty" placeholder="">-->
+                            <a style="float:right;" href="#" ng-click="BuscarClientes()"><img src="images/btnLupa.png" /></a>
+
+                            
+                            <div style="150px;">
+                            <select style="min-width: 250px;" ng-model="filterCotizacion.Cliente" class="form-control ng-pristine ng-valid ng-empty ng-touched" multiple="multiple">
+                                <option ng-repeat="option in filterCotizacion.ClientesSeleccionados" ng-value="option.name" class="ng-binding ng-scope" value="string:" selected="selected">{{option.name}}</option>
+                            </select>
+                            </div>
+                        </div>
+                        
+                        
+                        <div style="vertical-align:top;margin-left:5px;margin-top:5px" class="btn-group">
+                            <label>MONEDA</label>
+                            <a style="float:right;" href="#" ng-click="BuscarMonedas()"><img src="images/btnLupa.png"></a>
+
+                            <select name="Moneda" ng-model="filterCotizacion.Moneda" class="form-control ng-pristine ng-valid ng-empty ng-touched" multiple="multiple">
+                                <option ng-repeat="option in filterCotizacion.MonedasSeleccionadas" ng-value="option.name" class="ng-binding ng-scope" value="string:" selected="selected">{{option.name}}</option>
+                            </select>
+                        </div>
+
+                        <div style="vertical-align:top;margin-left:5px;margin-top:5px" class="btn-group">
+                            <label>LÓGICA</label>
+                            <select name="Logica" ng-model="filterCotizacion.Logica" class="form-control ng-pristine ng-valid ng-empty ng-touched">
+                                <option ng-repeat="option in filterCotizacion.Logicas" ng-value="option.name" class="ng-binding ng-scope" value="string:" selected="selected">{{option.name}}</option>
+                            </select>
+                        </div>
+
+                        <div style="vertical-align:top;margin-left:5px;margin-top:5px" class="btn-group">
+                            <label>MONTO</label>
+                            <input style="width:150px" type="text" name="Monto" ng-disabled="$filterRow.disabled" ng-model="filterCotizacion.Monto" class="input-filter form-control ng-pristine ng-untouched ng-valid ng-scope ng-empty" placeholder="">
+                        </div>
+
+                    </div>
+
+                    <div class="pull-left" style="width:100%;margin-top:25px;">
+                        
+
+                    </div>
+                    <div class="pull-left" style="margin-top:25px;">
+                        <div style="margin-left:5px;margin-top:5px;width:250px;" class="btn-group">
+                            <label>SOLICITUD</label>
+                            <select ng-model="filterCotizacion.Solicitud" class="form-control ng-pristine ng-valid ng-empty ng-touched">
+                                <option ng-repeat="option in filterCotizacion.Solicitudes" ng-value="option.name" class="ng-binding ng-scope" value="string:" selected="selected">{{option.name}}</option>
+                            </select>
+                        </div>
+                        
+                        <div style="margin-left:20px;margin-top:5px;width:285px;" class="btn-group">
+                            <label>PERIODO DE FECHA</label>
+                            <div class="input-group date">
+
+                                <div style="width:140px;float:left;" class="input-group date" id="1">
+                                    <input name="FechaDesde" ng-model="filterCotizacion.FechaDesde" id="FechaDesde" datetimepicker="" placeholder="DD/MM/AAAA" class="form-control ng-valid ng-isolate-scope ng-not-empty ng-dirty ng-valid-parse ng-touched">
+                                    <span class="input-group-addon">
+                                        <span><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                                    </span>
+                                </div>
+                                <div style="width:140px;" class="input-group date" id="Div1" style="float:left;">
+                                    <input ng-model="filterCotizacion.FechaHasta" name="FechaHasta" id="FechaHasta" datetimepicker="" placeholder="DD/MM/AAAA" class="form-control ng-valid ng-isolate-scope ng-not-empty ng-dirty ng-valid-parse ng-touched">
+                                    <span class="input-group-addon">
+                                        <span><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="margin-left:0px;margin-top:5px" class="btn-group">
+                            <label>VENTANA HORARIA</label>
+                            <div>
+                                <div class="input-group bootstrap-timepicker timepicker" style="width:120px;float:left;">
+                                    <input class="form-control input-small" ng-model="filterCotizacion.HoraInicio" name="HoraInicio" id="HoraInicio" type="text"/>
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+                                </div>    
+                                <div class="input-group bootstrap-timepicker timepicker" style="width:120px;margin-left:15px;">
+                                    <input class="form-control input-small" ng-model="filterCotizacion.HoraFinal" id="HoraFinal" type="text"/>
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+                                </div>    
+                                <script type="text/javascript">
+                                    $('#HoraInicio, #HoraFinal').timepicker();
+                                </script>
+                                <!--<input style="float:left;width:60px;" type="text" ng-model="filterCotizacion.HoraFinal" name="HoraFinal" ng-disabled="$filterRow.disabled" class="input-filter form-control ng-pristine ng-untouched ng-valid ng-scope ng-empty" placeholder=""/>-->
+
+
+                            </div>
+                        </div>
+
+                        <script type="text/javascript">
+
+
+//                            $.datepicker.regional['es'] = {
+//                                closeText: 'Cerrar',
+//                                prevText: '< Ant',
+//                                nextText: 'Sig >',
+//                                currentText: 'Hoy',
+//                                monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+//                                monthNamesShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+//                                dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+//                                dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mié', 'Juv', 'Vie', 'Sáb'],
+//                                dayNamesMin: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sá'],
+//                                weekHeader: 'Sm',
+//                                dateFormat: 'dd/mm/yy',
+//                                firstDay: 1,
+//                                isRTL: false,
+//                                showMonthAfterYear: false,
+//                                yearSuffix: ''
+//                            };
+//                            $.datepicker.setDefaults($.datepicker.regional['es']);
+
+//                            $.fn.datetimepicker.dates['en'] = {
+//                                days: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+//                                daysShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+//                                daysMin: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
+//                                months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+//                                monthsShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+//                                today: "Today"
+//                            };
+                            $(function () {
+                                $('#FechaDesde').datetimepicker({
+                                    locale: 'es',
+                                    format: 'DD/MM/YYYY'
+                                });
+
+                                $('#FechaHasta').datetimepicker({ locale: 'es',
+                                    format: 'DD/MM/YYYY'
+                                });
+
+                                $('#timepicker1').timepicker();
+                            });
+                        </script>
+
+                    </div>
+
+                    <!--Botones Derecha-->
+                    <div class="pull-right" style="display:none;">
+                        <div class="btn-group">
+                            <input type="checkbox" style="margin-top:8px" class="btn btn-box-tool dropdown-toggle ng-pristine ng-untouched ng-valid ng-empty" title="Seleccionar Todos" ng-click="selectedAllRow()" ng-model="checkedAll">
+                            <label class="btn btn-box-tool dropdown-toggle">Select All</label>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" ng-click="buscarCotizaciones()" title="Refrescar" style="font-family:inherit" class="btn-box-tool btn no-padding"><i class="fa fa-refresh" aria-hidden="true"></i> Refrescar</button>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-box-tool dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-wrench"></i> Filtros
+                            </button>
+                            <ul class="dropdown-menu tree" role="menu">
+
+                                <li><a href="" ng-click="filtrosGrilla()">Filtros grilla</a></li>
+
+                                <li><a href="" ng-click="filtrosAvanzados()">Filtros avanzados</a></li>
+                            </ul>
+                        </div>
+                        <div class="btn-group">
+
+                            <button type="button" class="btn btn-box-tool dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-bars"></i> Opciones
+                            </button>
+
+                            <ul class="dropdown-menu pull-right tree" role="menu">
+                                <li><a href=""><i class="fa fa-mail-forward"></i>Enviar por Mail.</a></li>
+                                <li><a href=""><i class="fa fa-file-excel-o"></i> Exportar a excel</a></li>
+                                <li><a href=""><i class="fa fa-file-pdf-o"></i> Exportar a PDF</a></li>
+                                <li><a href=""><i class="fa fa-print"></i> Imprimir</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <!--/Header-->
+                
+                <div class="box-header with-border btn-box-tool" style="margin-left:350px;margin-top:50px;">
+                    <button id="btnAgregar" type="submit" class="btn btn-primary btn-sm">
+                        <span>Agregar</span>
+                        <i class="fa fa-times"></i>
+                    </button>
+                    <button id="btnCancelar" ng-click="cancelar()" type="reset" class="btn btn-danger btn-sm">
+                        <span>Cancelar</span>
+                        <i class="fa fa-times"></i>
+                    </button>
+
+                    
+                    
+                    <div style="float:right;text-align:center;margin-right:25px;">
+                    
+                            <img alt="Botón de Pánico" title="Botón de Pánico" src="images/btnPanico.jpg" style="height:70px;cursor:pointer;"/>
+                            <br />
+                            <button id="btnParametros" type="button" ng-click="PopupParametros()" class="btn btn-success btn-sm">
+                                <span>Parametros</span>
+                                <i class="fa fa-times"></i>
+                            </button>
+                        </div>
+
+
+
+                </div>
+                <hr />
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                <table class="table" cellpadding="1" cellspacing="1">
+	                <tr>
+		                <th style="text-align:center;">Segmento</th>
+		                <th style="text-align:center;">Cliente</th>
+                        <th style="text-align:center;">Logica</th>
+                        <th style="text-align:center;">Monto</th>
+                        <th style="text-align:center;">Moneda</th>
+                        <th style="text-align:center;">Solicitud</th>
+		                <th style="text-align:center;">Periodo Fechas</th>
+                        <th style="text-align:center;">Periodo Horario</th>
+                        <th style="text-align:center;">Indicador</th>
+                        <th style="text-align:center;">Accion</th>
+	                </tr>
+	                <tr ng-repeat="item in reglas">
+		                <td>{{item.segmento}}</td>
+		                <td>{{item.cliente}}</td>
+		                <td>{{item.logica}}</td>
+                        <td>{{item.monto}}</td>
+                        <td>{{item.moneda}}</td>
+                        <td>{{item.solicitud}}</td>
+                        <td>{{item.periodoFechas}}</td>
+		                <td>{{item.periodoHorario}}</td>
+		                <td align="center">{{item.indicador}}</td>
+                        <td></td>
+	                </tr>
+                </table>
+
+
+                <!--<div class="box-header with-border btn-box-tool">
+                    <span class="ng-binding">Ultima consulta realizada: 5 dic. 2017 15:11:59</span>
+                </div>-->
+                <table ng-table="tableParams" class="table table-bordered table-condensed ng-table-responsive ng-scope ng-table" show-filter="hideBasicFilters" style="display: block;overflow-x: auto;white-space: nowrap;table-layout:fixed;"><!-- ngInclude: templates.header -->
+                <thead ng-include="templates.header" class="ng-scope"><!-- ngIf: params.hasGroup() --> <tr class="ng-table-sort-header"> <!-- ngRepeat: $column in $columns --><!-- ngIf: $column.show(this) --><th title="" ng-repeat="$column in $columns" ng-class="{
+                    &#39;sortable&#39;: $column.sortable(this),
+                    &#39;sort-asc&#39;: params.sorting()[$column.sortable(this)]==&#39;asc&#39;,
+                    &#39;sort-desc&#39;: params.sorting()[$column.sortable(this)]==&#39;desc&#39;
+                  }" ng-click="sortBy($column, $event)" ng-if="$column.show(this)" ng-init="template = $column.headerTemplateURL(this)" class="header  sortable"> <!-- ngIf: !template --><div ng-if="!template" class="ng-table-header ng-scope" ng-class="{&#39;sort-indicator&#39;: params.settings().sortingIndicator == &#39;div&#39;}"> <span ng-bind="$column.title(this)" ng-class="{&#39;sort-indicator&#39;: params.settings().sortingIndicator == &#39;span&#39;}" class="ng-binding sort-indicator">Segmento</span> </div><!-- end ngIf: !template --> <!-- ngIf: template --> </th><!-- end ngIf: $column.show(this) --><!-- end ngRepeat: $column in $columns --><!-- ngIf: $column.show(this) --><th title="" ng-repeat="$column in $columns" ng-class="{
+                    &#39;sortable&#39;: $column.sortable(this),
+                    &#39;sort-asc&#39;: params.sorting()[$column.sortable(this)]==&#39;asc&#39;,
+                    &#39;sort-desc&#39;: params.sorting()[$column.sortable(this)]==&#39;desc&#39;
+                  }" ng-click="sortBy($column, $event)" ng-if="$column.show(this)" ng-init="template = $column.headerTemplateURL(this)" class="header  sortable"> <!-- ngIf: !template --><div ng-if="!template" class="ng-table-header ng-scope" ng-class="{&#39;sort-indicator&#39;: params.settings().sortingIndicator == &#39;div&#39;}"> <span ng-bind="$column.title(this)" ng-class="{&#39;sort-indicator&#39;: params.settings().sortingIndicator == &#39;span&#39;}" class="ng-binding sort-indicator">Cliente</span> </div><!-- end ngIf: !template --> <!-- ngIf: template --> </th><!-- end ngIf: $column.show(this) --><!-- end ngRepeat: $column in $columns --><!-- ngIf: $column.show(this) -->
+                  
+                  
+                  
+                  
+                  <!-- end ngIf: $column.show(this) --><!-- end ngRepeat: $column in $columns --><!-- ngIf: $column.show(this) --><th title="" ng-repeat="$column in $columns" ng-class="{
+                    &#39;sortable&#39;: $column.sortable(this),
+                    &#39;sort-asc&#39;: params.sorting()[$column.sortable(this)]==&#39;asc&#39;,
+                    &#39;sort-desc&#39;: params.sorting()[$column.sortable(this)]==&#39;desc&#39;
+                  }" ng-click="sortBy($column, $event)" ng-if="$column.show(this)" ng-init="template = $column.headerTemplateURL(this)" class="header  sortable"> <!-- ngIf: !template --><div ng-if="!template" class="ng-table-header ng-scope" ng-class="{&#39;sort-indicator&#39;: params.settings().sortingIndicator == &#39;div&#39;}"> <span ng-bind="$column.title(this)" ng-class="{&#39;sort-indicator&#39;: params.settings().sortingIndicator == &#39;span&#39;}" class="ng-binding sort-indicator">Logica</span> </div><!-- end ngIf: !template --> <!-- ngIf: template --> </th><!-- end ngIf: $column.show(this) --><!-- end ngRepeat: $column in $columns --><!-- ngIf: $column.show(this) --><th title="" ng-repeat="$column in $columns" ng-class="{
+                    &#39;sortable&#39;: $column.sortable(this),
+                    &#39;sort-asc&#39;: params.sorting()[$column.sortable(this)]==&#39;asc&#39;,
+                    &#39;sort-desc&#39;: params.sorting()[$column.sortable(this)]==&#39;desc&#39;
+                  }" ng-click="sortBy($column, $event)" ng-if="$column.show(this)" ng-init="template = $column.headerTemplateURL(this)" class="header  sortable"> <!-- ngIf: !template --><div ng-if="!template" class="ng-table-header ng-scope" ng-class="{&#39;sort-indicator&#39;: params.settings().sortingIndicator == &#39;div&#39;}"> <span ng-bind="$column.title(this)" ng-class="{&#39;sort-indicator&#39;: params.settings().sortingIndicator == &#39;span&#39;}" class="ng-binding sort-indicator">Monto</span> </div><!-- end ngIf: !template --> <!-- ngIf: template --> </th><!-- end ngIf: $column.show(this) --><!-- end ngRepeat: $column in $columns --><!-- ngIf: $column.show(this) --><th title="" ng-repeat="$column in $columns" ng-class="{
+                    &#39;sortable&#39;: $column.sortable(this),
+                    &#39;sort-asc&#39;: params.sorting()[$column.sortable(this)]==&#39;asc&#39;,
+                    &#39;sort-desc&#39;: params.sorting()[$column.sortable(this)]==&#39;desc&#39;
+                  }" ng-click="sortBy($column, $event)" ng-if="$column.show(this)" ng-init="template = $column.headerTemplateURL(this)" class="header  sortable"> <!-- ngIf: !template --><div ng-if="!template" class="ng-table-header ng-scope" ng-class="{&#39;sort-indicator&#39;: params.settings().sortingIndicator == &#39;div&#39;}"> <span ng-bind="$column.title(this)" ng-class="{&#39;sort-indicator&#39;: params.settings().sortingIndicator == &#39;span&#39;}" class="ng-binding sort-indicator">Moneda</span> </div><!-- end ngIf: !template --> <!-- ngIf: template --> </th><!-- end ngIf: $column.show(this) --><!-- end ngRepeat: $column in $columns --><!-- ngIf: $column.show(this) --><th title="" ng-repeat="$column in $columns" ng-class="{
+                    &#39;sortable&#39;: $column.sortable(this),
+                    &#39;sort-asc&#39;: params.sorting()[$column.sortable(this)]==&#39;asc&#39;,
+                    &#39;sort-desc&#39;: params.sorting()[$column.sortable(this)]==&#39;desc&#39;
+                  }" ng-click="sortBy($column, $event)" ng-if="$column.show(this)" ng-init="template = $column.headerTemplateURL(this)" class="header  sortable"> <!-- ngIf: !template --><div ng-if="!template" class="ng-table-header ng-scope" ng-class="{&#39;sort-indicator&#39;: params.settings().sortingIndicator == &#39;div&#39;}"> <span ng-bind="$column.title(this)" ng-class="{&#39;sort-indicator&#39;: params.settings().sortingIndicator == &#39;span&#39;}" class="ng-binding sort-indicator">Solicitud</span> </div><!-- end ngIf: !template --> <!-- ngIf: template --> </th><!-- end ngIf: $column.show(this) --><!-- end ngRepeat: $column in $columns --><!-- ngIf: $column.show(this) --><th title="" ng-repeat="$column in $columns" ng-class="{
+                    &#39;sortable&#39;: $column.sortable(this),
+                    &#39;sort-asc&#39;: params.sorting()[$column.sortable(this)]==&#39;asc&#39;,
+                    &#39;sort-desc&#39;: params.sorting()[$column.sortable(this)]==&#39;desc&#39;
+                  }" ng-click="sortBy($column, $event)" ng-if="$column.show(this)" ng-init="template = $column.headerTemplateURL(this)" class="header  sortable"> <!-- ngIf: !template --><div ng-if="!template" class="ng-table-header ng-scope" ng-class="{&#39;sort-indicator&#39;: params.settings().sortingIndicator == &#39;div&#39;}"> <span ng-bind="$column.title(this)" ng-class="{&#39;sort-indicator&#39;: params.settings().sortingIndicator == &#39;span&#39;}" class="ng-binding sort-indicator">Periodo Fechas</span> </div><!-- end ngIf: !template --> <!-- ngIf: template --> </th><!-- end ngIf: $column.show(this) --><!-- end ngRepeat: $column in $columns --><!-- ngIf: $column.show(this) --><th title="" ng-repeat="$column in $columns" ng-class="{
+                    &#39;sortable&#39;: $column.sortable(this),
+                    &#39;sort-asc&#39;: params.sorting()[$column.sortable(this)]==&#39;asc&#39;,
+                    &#39;sort-desc&#39;: params.sorting()[$column.sortable(this)]==&#39;desc&#39;
+                  }" ng-click="sortBy($column, $event)" ng-if="$column.show(this)" ng-init="template = $column.headerTemplateURL(this)" class="header  sortable"> <!-- ngIf: !template --><div ng-if="!template" class="ng-table-header ng-scope" ng-class="{&#39;sort-indicator&#39;: params.settings().sortingIndicator == &#39;div&#39;}"> <span ng-bind="$column.title(this)" ng-class="{&#39;sort-indicator&#39;: params.settings().sortingIndicator == &#39;span&#39;}" class="ng-binding sort-indicator">Periodo Horario</span> </div><!-- end ngIf: !template --> <!-- ngIf: template --> </th><!-- end ngIf: $column.show(this) --><!-- end ngRepeat: $column in $columns --><!-- ngIf: $column.show(this) --><th title="" ng-repeat="$column in $columns" ng-class="{
+                    &#39;sortable&#39;: $column.sortable(this),
+                    &#39;sort-asc&#39;: params.sorting()[$column.sortable(this)]==&#39;asc&#39;,
+                    &#39;sort-desc&#39;: params.sorting()[$column.sortable(this)]==&#39;desc&#39;
+                  }" ng-click="sortBy($column, $event)" ng-if="$column.show(this)" ng-init="template = $column.headerTemplateURL(this)" class="header  sortable"> <!-- ngIf: !template --><div ng-if="!template" class="ng-table-header ng-scope" ng-class="{&#39;sort-indicator&#39;: params.settings().sortingIndicator == &#39;div&#39;}"> <span ng-bind="$column.title(this)" ng-class="{&#39;sort-indicator&#39;: params.settings().sortingIndicator == &#39;span&#39;}" class="ng-binding sort-indicator">Indicador</span> </div><!-- end ngIf: !template --> <!-- ngIf: template --> </th><!-- end ngIf: $column.show(this) --><!-- end ngRepeat: $column in $columns --><!-- ngIf: $column.show(this) --><th title="" ng-repeat="$column in $columns" ng-class="{
+                    &#39;sortable&#39;: $column.sortable(this),
+                    &#39;sort-asc&#39;: params.sorting()[$column.sortable(this)]==&#39;asc&#39;,
+                    &#39;sort-desc&#39;: params.sorting()[$column.sortable(this)]==&#39;desc&#39;
+                  }" ng-click="sortBy($column, $event)" ng-if="$column.show(this)" ng-init="template = $column.headerTemplateURL(this)" class="header  sortable"> <!-- ngIf: !template --><div ng-if="!template" class="ng-table-header ng-scope" ng-class="{&#39;sort-indicator&#39;: params.settings().sortingIndicator == &#39;div&#39;}"> <span ng-bind="$column.title(this)" ng-class="{&#39;sort-indicator&#39;: params.settings().sortingIndicator == &#39;span&#39;}" class="ng-binding sort-indicator">Accion</span> </div><!-- end ngIf: !template --> <!-- ngIf: template --> </th><!-- end ngIf: $column.show(this) --><!-- end ngRepeat: $column in $columns --><!-- ngIf: $column.show(this) -->
+                  
+                  </tr>
+                  
+
+
+                  <tr ng-show="show_filter" class="ng-table-filters ng-hide"> <!-- ngRepeat: $column in $columns --><!-- ngIf: $column.show(this) -->
+                    <th data-title-text="Concepto" ng-repeat="$column in $columns" ng-if="$column.show(this)" class="filter " ng-class="params.settings().filterOptions.filterLayout === &#39;horizontal&#39; ? &#39;filter-horizontal&#39; : &#39;&#39;"> <!-- ngRepeat: (name, filter) in $column.filter(this) --><!-- ngInclude: config.getTemplateUrl(filter) -->
+                    <div ng-repeat="(name, filter) in $column.filter(this)" ng-include="config.getTemplateUrl(filter)" class="filter-cell ng-scope s12 last" ng-class="[getFilterCellCss($column.filter(this), params.settings().filterOptions.filterLayout), $last ? &#39;last&#39; : &#39;&#39;]">
+                        <input type="text" name="Concepto" ng-disabled="$filterRow.disabled" ng-model="params.filter()[name]" class="input-filter form-control ng-pristine ng-untouched ng-valid ng-scope ng-empty" placeholder=""> </div><!-- end ngRepeat: (name, filter) in $column.filter(this) --> 
+                    </th><!-- end ngIf: $column.show(this) --><!-- end ngRepeat: $column in $columns --><!-- ngIf: $column.show(this) -->
+                    <th data-title-text="Operacion" ng-repeat="$column in $columns" ng-if="$column.show(this)" class="filter " ng-class="params.settings().filterOptions.filterLayout === &#39;horizontal&#39; ? &#39;filter-horizontal&#39; : &#39;&#39;"> <!-- ngRepeat: (name, filter) in $column.filter(this) --><!-- ngInclude: config.getTemplateUrl(filter) -->
+                    <div ng-repeat="(name, filter) in $column.filter(this)" ng-include="config.getTemplateUrl(filter)" class="filter-cell ng-scope s12 last" ng-class="[getFilterCellCss($column.filter(this), params.settings().filterOptions.filterLayout), $last ? &#39;last&#39; : &#39;&#39;]">
+                        <input type="text" value="Cliente 1" name="Operacion" ng-disabled="$filterRow.disabled" ng-model="params.filter()[name]" class="input-filter form-control ng-pristine ng-untouched ng-valid ng-scope ng-empty" placeholder=""> </div><!-- end ngRepeat: (name, filter) in $column.filter(this) --> 
+                    </th><!-- end ngIf: $column.show(this) --><!-- end ngRepeat: $column in $columns --><!-- ngIf: $column.show(this) -->
+                    <th data-title-text="Tipo Op." ng-repeat="$column in $columns" ng-if="$column.show(this)" class="filter " ng-class="params.settings().filterOptions.filterLayout === &#39;horizontal&#39; ? &#39;filter-horizontal&#39; : &#39;&#39;"> <!-- ngRepeat: (name, filter) in $column.filter(this) --><!-- ngInclude: config.getTemplateUrl(filter) -->
+                    <div ng-repeat="(name, filter) in $column.filter(this)" ng-include="config.getTemplateUrl(filter)" class="filter-cell ng-scope s12 last" ng-class="[getFilterCellCss($column.filter(this), params.settings().filterOptions.filterLayout), $last ? &#39;last&#39; : &#39;&#39;]">
+                        <input type="text" name="TipoOp" ng-disabled="$filterRow.disabled" ng-model="params.filter()[name]" class="input-filter form-control ng-pristine ng-untouched ng-valid ng-scope ng-empty" placeholder=""> </div><!-- end ngRepeat: (name, filter) in $column.filter(this) --> 
+                    </th><!-- end ngIf: $column.show(this) --><!-- end ngRepeat: $column in $columns --><!-- ngIf: $column.show(this) --><th data-title-text="Cliente" ng-repeat="$column in $columns" ng-if="$column.show(this)" class="filter " ng-class="params.settings().filterOptions.filterLayout === &#39;horizontal&#39; ? &#39;filter-horizontal&#39; : &#39;&#39;"> <!-- ngRepeat: (name, filter) in $column.filter(this) --><!-- ngInclude: config.getTemplateUrl(filter) --><div ng-repeat="(name, filter) in $column.filter(this)" ng-include="config.getTemplateUrl(filter)" class="filter-cell ng-scope s12 last" ng-class="[getFilterCellCss($column.filter(this), params.settings().filterOptions.filterLayout), $last ? &#39;last&#39; : &#39;&#39;]"><input type="text" name="Cliente" ng-disabled="$filterRow.disabled" ng-model="params.filter()[name]" class="input-filter form-control ng-pristine ng-untouched ng-valid ng-scope ng-empty" placeholder=""> </div><!-- end ngRepeat: (name, filter) in $column.filter(this) --> </th><!-- end ngIf: $column.show(this) --><!-- end ngRepeat: $column in $columns --><!-- ngIf: $column.show(this) --><th data-title-text="Monto" ng-repeat="$column in $columns" ng-if="$column.show(this)" class="filter " ng-class="params.settings().filterOptions.filterLayout === &#39;horizontal&#39; ? &#39;filter-horizontal&#39; : &#39;&#39;"> <!-- ngRepeat: (name, filter) in $column.filter(this) --><!-- ngInclude: config.getTemplateUrl(filter) --><div ng-repeat="(name, filter) in $column.filter(this)" ng-include="config.getTemplateUrl(filter)" class="filter-cell ng-scope s12 last" ng-class="[getFilterCellCss($column.filter(this), params.settings().filterOptions.filterLayout), $last ? &#39;last&#39; : &#39;&#39;]"><input type="number" name="Monto" ng-disabled="$filterRow.disabled" ng-model="params.filter()[name]" class="input-filter form-control ng-pristine ng-untouched ng-valid ng-scope ng-empty" placeholder=""> </div><!-- end ngRepeat: (name, filter) in $column.filter(this) --> </th><!-- end ngIf: $column.show(this) --><!-- end ngRepeat: $column in $columns --><!-- ngIf: $column.show(this) --><th data-title-text="Especie" ng-repeat="$column in $columns" ng-if="$column.show(this)" class="filter " ng-class="params.settings().filterOptions.filterLayout === &#39;horizontal&#39; ? &#39;filter-horizontal&#39; : &#39;&#39;"> <!-- ngRepeat: (name, filter) in $column.filter(this) --><!-- ngInclude: config.getTemplateUrl(filter) --><div ng-repeat="(name, filter) in $column.filter(this)" ng-include="config.getTemplateUrl(filter)" class="filter-cell ng-scope s12 last" ng-class="[getFilterCellCss($column.filter(this), params.settings().filterOptions.filterLayout), $last ? &#39;last&#39; : &#39;&#39;]"><input type="text" name="Especie" ng-disabled="$filterRow.disabled" ng-model="params.filter()[name]" class="input-filter form-control ng-pristine ng-untouched ng-valid ng-scope ng-empty" placeholder=""> </div><!-- end ngRepeat: (name, filter) in $column.filter(this) --> </th><!-- end ngIf: $column.show(this) --><!-- end ngRepeat: $column in $columns --><!-- ngIf: $column.show(this) --><th data-title-text="Fecha op." ng-repeat="$column in $columns" ng-if="$column.show(this)" class="filter " ng-class="params.settings().filterOptions.filterLayout === &#39;horizontal&#39; ? &#39;filter-horizontal&#39; : &#39;&#39;"> <!-- ngRepeat: (name, filter) in $column.filter(this) --><!-- ngInclude: config.getTemplateUrl(filter) --><div ng-repeat="(name, filter) in $column.filter(this)" ng-include="config.getTemplateUrl(filter)" class="filter-cell ng-scope s12 last" ng-class="[getFilterCellCss($column.filter(this), params.settings().filterOptions.filterLayout), $last ? &#39;last&#39; : &#39;&#39;]"><input type="text" name="FechaOp" ng-disabled="$filterRow.disabled" ng-model="params.filter()[name]" class="input-filter form-control ng-pristine ng-untouched ng-valid ng-scope ng-empty" placeholder=""> </div><!-- end ngRepeat: (name, filter) in $column.filter(this) --> </th><!-- end ngIf: $column.show(this) --><!-- end ngRepeat: $column in $columns --><!-- ngIf: $column.show(this) --><th data-title-text="Cierre" ng-repeat="$column in $columns" ng-if="$column.show(this)" class="filter " ng-class="params.settings().filterOptions.filterLayout === &#39;horizontal&#39; ? &#39;filter-horizontal&#39; : &#39;&#39;"> <!-- ngRepeat: (name, filter) in $column.filter(this) --><!-- ngInclude: config.getTemplateUrl(filter) --><div ng-repeat="(name, filter) in $column.filter(this)" ng-include="config.getTemplateUrl(filter)" class="filter-cell ng-scope s12 last" ng-class="[getFilterCellCss($column.filter(this), params.settings().filterOptions.filterLayout), $last ? &#39;last&#39; : &#39;&#39;]"><input type="text" name="Cierre" ng-disabled="$filterRow.disabled" ng-model="params.filter()[name]" class="input-filter form-control ng-pristine ng-untouched ng-valid ng-scope ng-empty" placeholder=""> </div><!-- end ngRepeat: (name, filter) in $column.filter(this) --> </th><!-- end ngIf: $column.show(this) --><!-- end ngRepeat: $column in $columns --><!-- ngIf: $column.show(this) --><th data-title-text="Puesto" ng-repeat="$column in $columns" ng-if="$column.show(this)" class="filter " ng-class="params.settings().filterOptions.filterLayout === &#39;horizontal&#39; ? &#39;filter-horizontal&#39; : &#39;&#39;"> <!-- ngRepeat: (name, filter) in $column.filter(this) --><!-- ngInclude: config.getTemplateUrl(filter) --><div ng-repeat="(name, filter) in $column.filter(this)" ng-include="config.getTemplateUrl(filter)" class="filter-cell ng-scope s12 last" ng-class="[getFilterCellCss($column.filter(this), params.settings().filterOptions.filterLayout), $last ? &#39;last&#39; : &#39;&#39;]"><input type="text" name="Puesto" ng-disabled="$filterRow.disabled" ng-model="params.filter()[name]" class="input-filter form-control ng-pristine ng-untouched ng-valid ng-scope ng-empty" placeholder=""> </div><!-- end ngRepeat: (name, filter) in $column.filter(this) --> </th><!-- end ngIf: $column.show(this) --><!-- end ngRepeat: $column in $columns --><!-- ngIf: $column.show(this) --><th data-title-text="Plazo" ng-repeat="$column in $columns" ng-if="$column.show(this)" class="filter " ng-class="params.settings().filterOptions.filterLayout === &#39;horizontal&#39; ? &#39;filter-horizontal&#39; : &#39;&#39;"> <!-- ngRepeat: (name, filter) in $column.filter(this) --><!-- ngInclude: config.getTemplateUrl(filter) --><div ng-repeat="(name, filter) in $column.filter(this)" ng-include="config.getTemplateUrl(filter)" class="filter-cell ng-scope s12 last" ng-class="[getFilterCellCss($column.filter(this), params.settings().filterOptions.filterLayout), $last ? &#39;last&#39; : &#39;&#39;]"><input type="text" name="Plazo" ng-disabled="$filterRow.disabled" ng-model="params.filter()[name]" class="input-filter form-control ng-pristine ng-untouched ng-valid ng-scope ng-empty" placeholder=""> </div><!-- end ngRepeat: (name, filter) in $column.filter(this) --> </th><!-- end ngIf: $column.show(this) --><!-- end ngRepeat: $column in $columns --><!-- ngIf: $column.show(this) --><th data-title-text="FechaLiq" ng-repeat="$column in $columns" ng-if="$column.show(this)" class="filter " ng-class="params.settings().filterOptions.filterLayout === &#39;horizontal&#39; ? &#39;filter-horizontal&#39; : &#39;&#39;"> <!-- ngRepeat: (name, filter) in $column.filter(this) --><!-- ngInclude: config.getTemplateUrl(filter) --><div ng-repeat="(name, filter) in $column.filter(this)" ng-include="config.getTemplateUrl(filter)" class="filter-cell ng-scope s12 last" ng-class="[getFilterCellCss($column.filter(this), params.settings().filterOptions.filterLayout), $last ? &#39;last&#39; : &#39;&#39;]"><input type="text" name="FechaLiq" ng-disabled="$filterRow.disabled" ng-model="params.filter()[name]" class="input-filter form-control ng-pristine ng-untouched ng-valid ng-scope ng-empty" placeholder=""> </div><!-- end ngRepeat: (name, filter) in $column.filter(this) --> </th><!-- end ngIf: $column.show(this) --><!-- end ngRepeat: $column in $columns --><!-- ngIf: $column.show(this) -->
+                  
+                  <!-- end ngIf: $column.show(this) --><!-- end ngRepeat: $column in $columns --> </tr> </thead>
+
+                    <colgroup>
+                        <!--<col class="fa-align-center" width="5%" />-->
+                        <col width="10%">
+                        <col width="12%">
+                        <col width="12%">
+                        <col width="18%">
+                        <col width="10%">
+                        <col width="7%">
+                        <col width="10%">
+                        <col width="8%">
+                        <col width="14%">
+                        <col width="14%">
+                        <col width="5%">
+                        <col width="10%">
+                    </colgroup>
+                    <tbody><!-- ngRepeat: r in $data -->
+                </tbody></table><div ng-table-pagination="params" template-url="templates.pagination" class="ng-scope ng-isolate-scope"><!-- ngInclude: templateUrl --><div ng-include="templateUrl" class="ng-scope"><!-- ngIf: params.data.length --> </div></div>
+            </div>
+        </form>
+        </div>
+    </div>
+</section>
+
+<!-- Filtros avanzados -->
+<script type="text/ng-template" id="filters" class="ng-scope">
+
+    <div class="ngdialog-message">
+
+        <h2 class="confirmation-title"><i class="fa fa-filter"></i> Filtros avanzados</h2>
+
+        <div class="col-md-12 ng-scope">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Cliente</label>
+                        <select name="ngvalueselect" ng-model="filterCotizacion.Cliente" class="form-control">
+                            <option ng-repeat="option in Clientes" ng-value="option.Codigo">{{option.Descripcion}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Cierre.</label>
+                        <select name="ngvalueselect" ng-change='selectedCierre()' ng-model="filterCotizacion.Cierre" class="form-control">
+                            <option ng-repeat="option in Cierre" ng-value="option.Codigo">{{option.Descripcion}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Tipo Op.</label>
+                        <select name="ngvalueselect" ng-model="filterCotizacion.TipoOp" class="form-control">
+                            <option ng-repeat="option in TipoOperaciones" ng-value="option.Codigo">{{option.Descripcion}}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Especie</label>
+                        <select name="ngvalueselect" ng-model="filterCotizacion.Especie" class="form-control">
+                            <option ng-repeat="option in Especies" ng-value="option.Codigo">{{option.Descripcion}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Cotiz. Especie</label>
+                        <select name="ngvalueselect" ng-model="filterCotizacion.CotizEspecie" class="form-control">
+                            <option ng-repeat="option in CotizEspecie" ng-value="option.Codigo">{{option.Descripcion}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div style="margin-top:30px" class="form-group">
+                        <label>AcreAvanzado</label>
+                        <input type="checkbox" ng-model="filterCotizacion.AcreAvanzado" name="chkAcreAvanzado">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Cliente</label>
+                        <input type="text" class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div class="row" ng-show="hideRowDirect">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Monto.Min</label>
+                        <input type="text" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Monto.Max</label>
+                        <input type="text" class="form-control" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ngdialog-buttons" style="margin-top:15px;">
+
+            <button type="button" class="ngdialog-button btn-primary" ng-click="buscarCotizaciones()">Aplicar</button>
+
+            <button type="button" class="ngdialog-button" ng-click="closeThisDialog()">Cerrar</button>
+
+        </div>
+
+    </div>
+
+</script>
+
+<!-- Cotizador -->
+<script type="text/ng-template" id="cotizador" class="ng-scope">
+
+    <div class="ngdialog-message">
+
+        <h3 class="confirmation-title">
+            <i class="fa fa-money"></i>
+            <label style="margin-left:5px">Cotizar Operaciones</label>
+        </h3>
+
+        <table ng-table="tableCotizador" show-filter="false" class="table table-condensed table-bordered table-striped ng-table-responsive" style="display: block;overflow-x: auto;white-space: nowrap;table-layout:fixed;">
+
+            <colgroup>
+                <!--<col class="fa-align-center" width="5%" />-->
+                <col width="10%" />
+                <col width="20%" />
+                <col width="30%" />
+                <col width="20%" />
+                <col width="20%" />
+            </colgroup>
+
+            <tr ng-repeat="r in $data" title="Seleccionar" style="cursor:pointer">
+                <td title="'Moneda'" sortable="'Especie'" align="center">
+                    {{r.Especie}}
+                </td>
+                <td title="'Tipo'" sortable="'TipoOp'" align="center">
+                    {{r.TipoOp}}
+                </td>
+                <td title="'MontoTotal'" sortable="'MontoTotal'" align="right">
+                    {{r.MontoTotal | currency:value=""}}
+                </td>
+                <td title="'Precio Mostrador'" align="right">
+                    <input type="text" style="text-align:right;" class="form-control" value="{{r.PrecioMostrador}}" />
+                </td>
+                <td title="'Precio Interno'" align="right">
+                    <input type="text" style="text-align:right;" class="form-control" value="{{r.PrecioInterno}}" />
+                </td>
+            </tr>
+        </table>
+
+        <div class="ngdialog-buttons" style="margin-top:15px;">
+            <button type="button" class="ngdialog-button btn-primary">Aplicar</button>
+            <button type="button" class="ngdialog-button" ng-click="closeThisDialog()">Cerrar</button>
+        </div>
+    </div>
+
+</script>
+
+<!-- Cambiar Puesto/Plazo -->
+<script type="text/ng-template" id="cambiarPuestoPlazo" class="ng-scope">
+
+    <div class="ngdialog-message">
+
+
+        <h3 class="confirmation-title">
+            <i class="fa fa-calendar-o"></i>
+            <label style="margin-left:5px">Cambiar Puesto/Plazo</label>
+        </h3>
+
+        <table ng-table="tableCambiarPuestoPlazo" show-filter="false" class="table table-condensed table-bordered  table-striped ng-table-responsive" style="display: block;overflow-x: auto;white-space: nowrap;table-layout:fixed;">
+
+            <colgroup>
+                <!--<col class="fa-align-center" width="5%" />-->
+                <col width="10%" />
+                <col width="12%" />
+                <col width="12%" />
+                <col width="18%" />
+                <col width="18%" />
+            </colgroup>
+
+            <tr ng-repeat="r in $data" title="Seleccionar" style="cursor:pointer">
+                <td title="'Moneda'" sortable="'Especie'" align="center">
+                    {{r.Especie}}
+                </td>
+                <td title="'Tipo'" sortable="'TipoOp'" align="center">
+                    {{r.TipoOp}}
+                </td>
+                <td title="'Puesto'" sortable="'Puesto'" align="center">
+                    <input type="checkbox" ng-model="r.Puesto" />
+                </td>
+                <td title="'Plazo'" align="left">
+                    <select name="ngvalueselect" class="form-control">
+                        <option ng-repeat="option in plazos" ng-value="option.Codigo">{{option.Descripcion}}</option>
+                    </select>
+                </td>
+                <td title="'FechaLiq'" sortable="'FechaLiq'" align="center" filter="{FechaLiq: 'text'}">
+                    {{r.FechaLiq | date:'dd/MM/yyyy'}}
+                </td>
+            </tr>
+        </table>
+
+        <div class="ngdialog-buttons" style="margin-top:15px;">
+            <button type="button" class="ngdialog-button btn-primary">Aplicar</button>
+            <button type="button" class="ngdialog-button" ng-click="closeThisDialog()">Cerrar</button>
+        </div>
+    </div>
+
+</script></div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+
+        <!-- Derecha -->
+        <div class="pull-right hidden-xs ng-binding">
+            V.1.0.0
+        </div>
+
+        <!-- Izquierda -->
+        <strong class="ng-binding">Copyright © 2017 <a href="http://intranet.ar.bsch/" class="ng-binding">Banco Santander Rio</a>.</strong> Todos los derechos reservados.
+    </footer>
+
+</div>
+</ui-view>
+
+        <!-- SPLASH SCREEN -->
+        <!--<script type="text/javascript" src="/Scripts/please-wait.min.js"></script>
+        <script type="text/javascript">
+            window.loading_screen = window.pleaseWait({
+                logo: "Dist/img/logo.png",
+                backgroundColor: '#FE0002',
+                loadingHtml: "<p class='loading-message'>Iniciando aplicacion...</p><div class='sk-spinner sk-spinner-three-bounce'><div class='sk-bounce1'></div><div class='sk-bounce2'></div><div class='sk-bounce3'></div></div>"
+            });
+
+            setInterval(function () { loading_screen.finish(); }, 3000);
+        </script>-->
+
+        <!-- JS SCRIPTS -->
+        
+        <script src="/Scripts/bootstrap.min.js"></script>
+        <script src="/Scripts/moment-with-locales.min.js"></script>
+        <script src="/Scripts/bootstrap-datetimepicker.min.js"></script>        
+        <script src="/Scripts/adminlte.min.js"></script>
+		<script src="/Scripts/fix.js"></script>
+        <script src="/Scripts/BuscarMenu.js"></script>
+    
+
+
+    <script src="/Scripts/datetimepicker.js"></script>
+</body></html>
