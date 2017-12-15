@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Alias="Self" Provider="Oracle.DataAccess.Client" ProviderManifestToken="12.1" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="MONEDA" EntityType="Model.Store.MONEDA" store:Type="Tables" Schema="SAM" />
+  </EntityContainer>
+  <EntityType Name="MONEDA">
+    <Key>
+      <PropertyRef Name="IDMONEDA" />
+    </Key>
+    <Property Name="IDMONEDA" Type="number" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar2" Nullable="false" MaxLength="25" />
+    <Property Name="SIGNO" Type="varchar2" Nullable="false" MaxLength="10" />
+  </EntityType>
+</Schema>
