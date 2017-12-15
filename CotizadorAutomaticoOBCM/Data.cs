@@ -19,7 +19,7 @@ namespace CotizadorAutomaticoOBCM
             cmd.CommandType = CommandType.Text;
 
             OracleDataReader dr = cmd.ExecuteReader();
-            //Inicializar Entidades
+            //Inicializar
             IList<EntityItem> items = new List<EntityItem>();
 
             while (dr.Read())
