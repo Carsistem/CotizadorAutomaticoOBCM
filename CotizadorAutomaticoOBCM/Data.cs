@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using Oracle.DataAccess.Client;
 using System.Data;
-//cambios de prueba
+//cambios de prueba ... Quité lo que modificaste para que pueda haber un cambio y puedas probar
 namespace CotizadorAutomaticoOBCM
 {
     public class Data
